@@ -1,0 +1,4 @@
+interface:
+  display_name: "高级科普 UI"
+  short_description: "把科普、展览、教学内容做成电影感首页与编辑型内页系统"
+  default_prompt: "使用 $advanced-science-ui 设计一个兼具电影感首页与编辑型内容页的高级科普或教学界面。"
