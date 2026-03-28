@@ -1,0 +1,55 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#04131F"/>
+      <stop offset="0.55" stop-color="#0B2230"/>
+      <stop offset="1" stop-color="#E6E1D5"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0F2C3C" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#0B1720" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect x="54" y="42" width="1492" height="816" rx="28" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.14)"/>
+  <rect x="92" y="86" width="1416" height="52" rx="26" fill="rgba(255,255,255,0.06)"/>
+  <text x="128" y="120" fill="#F4F1EA" font-size="20" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">Codex Skill Preview</text>
+  <text x="1220" y="120" fill="#BFD5DD" font-size="18" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">advanced-science-ui</text>
+
+  <text x="112" y="248" fill="#F7F3EA" font-size="88" font-weight="700" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">高级科普 UI</text>
+  <text x="114" y="322" fill="#D9E5EA" font-size="28" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">让首页像电影海报，让内容页像数字图录。</text>
+  <text x="114" y="366" fill="#D9E5EA" font-size="28" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">不做网课平台，不做 SaaS 卡片墙，不做模板化暗色科技风。</text>
+
+  <rect x="108" y="420" width="276" height="246" rx="22" fill="url(#panel)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="136" y="468" fill="#9ED7F0" font-size="18" font-family="Menlo, Monaco, monospace">01</text>
+  <text x="136" y="516" fill="#F7F3EA" font-size="34" font-weight="700" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">首页像海报</text>
+  <text x="136" y="566" fill="#D5E0E5" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">全幅媒体</text>
+  <text x="136" y="602" fill="#D5E0E5" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">单一主视觉</text>
+  <text x="136" y="638" fill="#D5E0E5" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">强世界观首屏</text>
+
+  <rect x="410" y="420" width="276" height="246" rx="22" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="438" y="468" fill="#F2C38B" font-size="18" font-family="Menlo, Monaco, monospace">02</text>
+  <text x="438" y="516" fill="#F7F3EA" font-size="34" font-weight="700" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">内容页像图录</text>
+  <text x="438" y="566" fill="#EDF1F2" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">图文节奏稳定</text>
+  <text x="438" y="602" fill="#EDF1F2" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">图注与术语统一</text>
+  <text x="438" y="638" fill="#EDF1F2" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">长内容仍然高级</text>
+
+  <rect x="712" y="420" width="276" height="246" rx="22" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.14)"/>
+  <text x="740" y="468" fill="#C6F1B8" font-size="18" font-family="Menlo, Monaco, monospace">03</text>
+  <text x="740" y="516" fill="#F7F3EA" font-size="34" font-weight="700" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">信息像简报</text>
+  <text x="740" y="566" fill="#EDF1F2" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">元信息有秩序</text>
+  <text x="740" y="602" fill="#EDF1F2" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">数据块有分量</text>
+  <text x="740" y="638" fill="#EDF1F2" font-size="22" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">科研感但不僵硬</text>
+
+  <rect x="1014" y="194" width="438" height="472" rx="28" fill="rgba(6,13,19,0.42)" stroke="rgba(255,255,255,0.16)"/>
+  <rect x="1046" y="226" width="374" height="196" rx="20" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="1326" cy="324" r="74" fill="rgba(255,255,255,0.18)"/>
+  <circle cx="1326" cy="324" r="48" fill="rgba(255,255,255,0.12)"/>
+  <text x="1070" y="470" fill="#A8D8F0" font-size="16" font-family="Menlo, Monaco, monospace">HOME + CONTENT</text>
+  <text x="1070" y="518" fill="#F7F3EA" font-size="42" font-weight="700" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">同一视觉宇宙</text>
+  <text x="1070" y="570" fill="#E7ECEE" font-size="24" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">首页负责建立世界观，</text>
+  <text x="1070" y="606" fill="#E7ECEE" font-size="24" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">内容页负责承载真正的知识密度。</text>
+
+  <rect x="108" y="728" width="1344" height="84" rx="20" fill="rgba(255,255,255,0.06)"/>
+  <text x="140" y="780" fill="#F7F3EA" font-size="30" font-family="PingFang SC, Noto Sans CJK SC, sans-serif">参考母体：OceanX / Brooklyn Museum / NASA JPL / MasterClass</text>
+</svg>

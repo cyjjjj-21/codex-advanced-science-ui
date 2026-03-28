@@ -40,6 +40,18 @@
   - UI 元数据与默认 prompt
 - `PROMPT.md`
   - 一段可直接复用的中文高阶提示词
+- `RELEASE_NOTES_CN.md`
+  - 中文发布说明与设计来龙去脉
+- `LICENSE`
+  - 标准 MIT 开源许可证
+- `LICENSE.zh-CN.md`
+  - MIT 许可证中文说明版
+- `assets/preview.svg`
+  - skill 预览图
+
+## 预览图
+
+![高级科普 UI 预览](./assets/preview.svg)
 
 ## 安装方式
 
@@ -50,6 +62,12 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/.cod
 ```
 
 如果已经有本地目录，也可以直接覆盖或软链接。
+
+如果你想先在本地试用，再决定是否覆盖现有 skill，可以这样：
+
+```bash
+git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/codex-advanced-science-ui
+```
 
 ## 触发方式
 
@@ -87,3 +105,16 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/.cod
 - 长内容会不会一滚到底就掉回普通模板
 
 如果只有第一页惊艳、后面全是常规文章流，那就说明这个 skill 还没有真正生效。
+
+## 开源说明
+
+本仓库使用 MIT 协议发布：
+
+- 法律效力版本：`LICENSE`
+- 中文说明版本：`LICENSE.zh-CN.md`
+
+## 发布记录
+
+首个公开版本的整理说明见：
+
+- `RELEASE_NOTES_CN.md`
