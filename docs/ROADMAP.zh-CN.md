@@ -212,7 +212,7 @@ v2 完成后，应满足以下条件：
 建议按以下顺序推进：
 
 1. 完成 v1.5 的目录重构
-2. 把当前 4 个 benchmark 迁移进经验库
+2. 把当前 benchmark 迁移并持续整理进经验库
 3. 固化 decision rules 和 update workflow
 4. 重写 `SKILL.md` 和 `PROMPT.md`
 5. 补 `STYLE_OPTIONS.md`
