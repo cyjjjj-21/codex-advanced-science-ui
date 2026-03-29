@@ -31,6 +31,21 @@ axes:
   motion_density:
     label: 动效密度
     question: 动效是服务叙事，还是只是制造热闹？
+  scroll_narrative:
+    label: 滚动叙事
+    question: 滚动是否只是浏览页面，还是会主动改变章节推进、镜头关系和阅读节奏？
+  hover_behavior:
+    label: Hover 行为
+    question: hover 是轻微反馈、信息揭示，还是主要交互语言的一部分？
+  state_transition_style:
+    label: 状态切换风格
+    question: 展开、切换、reveals 和 step changes 是克制过渡，还是强编排式转场？
+  cursor_interaction:
+    label: 鼠标/指针交互
+    question: 鼠标移动只是细节点缀，还是会驱动页面结构、镜头或内容探索？
+  sticky_reveal_behavior:
+    label: Sticky 与 Reveal 行为
+    question: sticky section、pinning 和 reveal 是否承担章节推进与叙事职责？
   cinematicness:
     label: 电影感
     question: 页面是否有显著的海报感、场景感和沉浸式压场能力？

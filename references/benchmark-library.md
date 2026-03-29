@@ -2,6 +2,8 @@
 
 这份文件记录 `advanced-science-ui` 当前吸收过的 benchmark 站点。每一条 benchmark 都必须同时覆盖首页和代表性内容页，不允许只看首屏。
 
+如果某个站点的高级感明显依赖滚动、hover、sticky 或 reveal，也必须把动态交互语言一起记录下来，而不是只保留静态截图印象。
+
 记录 benchmark 时，优先回答 5 个问题：
 
 1. 首页怎样建立世界观？

@@ -28,9 +28,22 @@
 - data_expression:
 - cta_tone:
 - motion_density:
+- scroll_narrative:
+- hover_behavior:
+- state_transition_style:
+- cursor_interaction:
+- sticky_reveal_behavior:
 - cinematicness:
 - editorialness:
 - industrialness:
+
+### 动态交互学习重点
+
+-
+
+### 动态风险提醒
+
+-
 
 ### 对当前 skill 的贡献
 

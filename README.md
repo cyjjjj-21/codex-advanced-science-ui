@@ -28,6 +28,8 @@
   - 当前支持 `cinematic-narrative`、`editorial-museum`、`mission-data`、`image-led-premium`、`playful-data-essay`
 - benchmark 学习
   - 新参考网站会同时看首页和内容页，再写入经验库
+- 动态交互观察
+  - 如果 benchmark 的高级感依赖滚动、hover、sticky 或 reveal，skill 会把动态语言也纳入结构化观察
 - 风格分流
   - 遇到明显异类风格时，会先判断是否该升级成新的 option，而不是硬混进默认模式
 - 结构化知识层
@@ -54,6 +56,7 @@
 - 图像、数据、术语、图注和 CTA 属于同一套语言
 - 在需要的时候，用定制交互把洞察变成可探索体验
 - 在图录、标本、馆藏和档案场景中，把机构化元信息做成真正高级的阅读系统
+- 当高级感来自动态语言时，不只看首屏截图，也会观察滚动叙事、hover 和状态切换
 
 ## 仓库结构
 
@@ -150,6 +153,20 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 - `editorial-museum` 与 `mission-data` 也能吸收 Apple Environment 这种“明亮底色 + 证据组织 + 公共事务 brief”型参考，而不必只靠暗场或大片建立高级感
 - `editorial-museum` 进一步吸收了 MoMA 的“馆藏目录级元信息 / 展厅与楼层定位 / 作品标签系统”能力
 - `editorial-museum` 也吸收了 Fondation Cartier 的“品牌化纯色场 / 海报式机构首页 / Visit 与 Programme 并存的文化机构入口”能力
+- 现在开始补“动态交互语言”这一层：以后判断 benchmark 是否挑战旧分类，不只看静态页面，也看滚动叙事、hover 行为和 reveal 机制
+
+## 动效实现建议
+
+这个 skill 现在会约束“动效应该长什么样、怎么验收”，但它本身保持库无关，不绑定具体实现方案。
+
+- CSS / WAAPI
+  - 默认推荐，适合克制微交互、轻 reveal 和低噪音状态切换
+- Motion
+  - 更适合 React 场景里的组件状态切换、presence 和布局过渡
+- GSAP
+  - 更适合 scroll narrative、timeline、复杂 parallax 和强编排式章节推进
+
+选择实现库时，优先按页面气质和交互密度匹配，而不是先决定“必须上某个动画库”。
 
 ## 开源说明
 

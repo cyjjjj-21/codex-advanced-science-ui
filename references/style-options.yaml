@@ -20,6 +20,15 @@ options:
     use_when:
       - 需要沉浸式主视觉
       - 页面靠场景、环境、任务现场建立世界观
+    motion_profile:
+      stance: 允许较强 scroll-driven 叙事，但必须服务章节推进
+      allow:
+        - 层次 reveal
+        - 轻到中度 parallax
+        - 章节过场与镜头推进
+      avoid:
+        - 为热闹而热闹的滚动特效
+        - 破坏阅读的强制动画
     avoid:
       - 廉价未来风
       - 过度发光边框
@@ -37,6 +46,16 @@ options:
       - 需要馆藏标签、楼层/展厅信息、作者/年份/材质等机构化元信息
       - 需要更品牌化、更海报化的文化机构首页，但内容页仍保持机构化阅读秩序
       - 更重视排版节奏与安静高级感
+    motion_profile:
+      stance: 动效最克制，只做轻 reveal、轻 hover 和轻 state change
+      allow:
+        - 图像或正文的轻微 reveal
+        - 元信息 hover 提示
+        - 稳定、低噪音的状态切换
+      avoid:
+        - 强鼠标跟随
+        - 夸张 parallax
+        - 噪音式 scroll 特效
     avoid:
       - 过度留白导致信息失重
       - 空洞的“高冷感”
@@ -50,6 +69,15 @@ options:
       - 需要任务简报、研究报告、工程可信度
       - 有较多元信息、术语、参数和数据容器
       - 需要把方法论、脚注和证据链纳入主叙事
+    motion_profile:
+      stance: 动效服务信息揭示、步骤推进和参数展开，不做炫技镜头感
+      allow:
+        - 数据模块 reveal
+        - 参数与步骤展开
+        - 状态切换与信息分层
+      avoid:
+        - 场景化镜头运动
+        - 为气氛服务的复杂编排
     avoid:
       - SaaS dashboard 感
       - 营销徽章堆叠
@@ -61,6 +89,15 @@ options:
     use_when:
       - 高质量人物或主题摄影承担主叙事
       - 需要海报感、详情页质感和克制的转化
+    motion_profile:
+      stance: 偏图像主导 hover 和封面级转场，不把交互机制当叙事骨架
+      allow:
+        - 图像 hover
+        - 轻量 details reveal
+        - 封面感转场
+      avoid:
+        - 复杂数据交互
+        - 多层级可玩机制
     avoid:
       - 普通课程售卖页
       - 只有封面页高级
@@ -73,6 +110,15 @@ options:
       - 需要 explorable explanation 或互动式 visual essay
       - 需要用定制机制而不是标准模块来讲述数据洞察
       - 题目本身适合读者参与、切换视角、逐步探索
+    motion_profile:
+      stance: 允许把交互机制本身作为叙事主骨架，但必须有清晰洞察
+      allow:
+        - 视角切换
+        - 逐步探索
+        - 点击取样、拖拽、滚动驱动解释
+      avoid:
+        - 儿童化噪音
+        - 只有 gimmick 没有信息增量
     avoid:
       - 儿童化或玩具化
       - 只有 gimmick 没有洞察

@@ -1,5 +1,26 @@
 # 发布说明
 
+## v1.7.0
+
+这个版本没有新增 style option，而是给 `advanced-science-ui` 增加了第一层动态交互方法论与验收能力。
+
+### 本版新增
+
+- `references/style-axes.yaml` 增加 scroll / hover / sticky / state transition 观察维度
+- `STYLE_OPTIONS.md`、`PROMPT.md`、`references/style-options.yaml` 为现有 option 增加动态边界
+- `references/update-workflow.md` 与 `templates/benchmark-entry.md` 补上动态交互学习与记录要求
+- `docs/VALIDATION.zh-CN.md` 增加 Playwright 状态采样式动态验收规则
+- `README.md` 增加库无关的动效实现建议矩阵
+
+### 这次补强了什么
+
+这个 skill 以前更擅长判断“静态页面系统”，现在开始能进一步判断：
+
+- 滚动是否在推进叙事
+- hover 是否在揭示信息
+- sticky / reveal 是否承担章节职责
+- 动态语言是在补强现有风格，还是已经构成新的阅读范式
+
 ## v1.6.2
 
 这个版本没有新增 style option，而是把 [Fondation Cartier](https://www.fondationcartier.com/en) 的“品牌化文化机构首页”能力吸收进了现有 `editorial-museum` 分支。
