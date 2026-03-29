@@ -36,7 +36,7 @@
 - 对科研、环境、工程传播主题，允许用 `Approach / Progress`、`承诺 / 证据` 这类配对结构组织长段内容。
 - 对博物馆、馆藏、标本、档案型内容，允许把楼层/展厅信息、作品标签、馆藏编号、创作时间、材质和安装历史组织成安静而正式的阅读系统。
 - 对基金会、双年展、艺术机构型首页，允许使用整版纯色场、海报式超大标题，以及 `Visit / Programme / Tickets / Shop` 这类公共入口与策展内容并存的结构，但内容页仍需保持机构化阅读秩序。
-- 如果选择 `playful-data-essay`，允许把“交互机制本身”当成叙事骨架，例如视角切换、拖拽探索、逐步揭示、可玩的视觉隐喻。
+- 如果选择 `playful-data-essay`，允许把“交互机制本身”当成叙事骨架，例如视角切换、拖拽探索、逐步揭示、可玩的视觉隐喻、hover 探测以及 canvas / 地图上的 cursor-driven 发现。
 - `editorial-museum` 只允许轻 reveal、轻 hover 和轻 state change，禁止强鼠标跟随、夸张 parallax 和噪音式 scroll 特效。
 - `mission-data` 的动效应偏数据 reveal、步骤推进和参数展开，禁止炫技式场景运动。
 - `cinematic-narrative` 可以有层次 reveal、轻到中度 parallax 和章节过场，但不能牺牲阅读稳定性。

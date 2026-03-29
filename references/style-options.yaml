@@ -119,6 +119,7 @@ options:
         - 视角切换
         - 逐步探索
         - 点击取样、拖拽、滚动驱动解释
+        - hover 探测与 canvas / 地图上的 cursor-driven 发现
       avoid:
         - 儿童化噪音
         - 只有 gimmick 没有信息增量

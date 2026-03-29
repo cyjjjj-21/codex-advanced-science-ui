@@ -131,9 +131,9 @@
 - 异类风格会先询问而不是擅自吸收
 - 动态体验会被按状态采样验证，而不是只停在首屏截图
 
-## phase 2 示例
+## phase 2 / 3 示例
 
-当前已经有两组真实案例可用于回归：
+当前已经有三组真实案例可用于回归：
 
 - `Distill`
   - 应被判断为“新候选，暂不升格”
@@ -141,3 +141,6 @@
 - `Apple AirPods Pro 3`
   - 应被判断为“强化已有风格”
   - 关键证据是 scroll narrative、sticky local nav、hash gallery 和 tab 切换
+- `The Pudding - Happy Map`
+  - 应被判断为“强化已有风格”
+  - 关键证据是 canvas 上的 cursor 状态切换、hover 探测和点击后原位人物卡片

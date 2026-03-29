@@ -115,6 +115,7 @@
   - 每篇内容页都允许围绕一个核心交互机制重建叙事骨架，例如视角切换、地图探索、时间轴滚动、点击取样
   - 数据、插画、动画和说明文字是同等重要的叙事单位，不是正文的附属物
   - `Data and methods`、作者署名、外部资料、打赏入口等元信息会被保留，但不会像传统报告页那样主导气质
+  - `happy map` 这类内容页会把 canvas 地图、鼠标指针状态和原位人物卡片做成探索机制的一部分，说明 `hover_behavior` 和 `cursor_interaction` 在这一类里可以承担真正的信息发现功能
 - 对 skill 的核心贡献：
   - 补上“高级科普 UI”里偏 visual essay / explorable explanation 的一支，而不是只有 museum、mission 或 cinematic
   - 证明互动机制本身可以成为主叙事，不必总是退回图文章节结构

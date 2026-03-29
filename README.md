@@ -83,6 +83,8 @@
   - v1.5 升级后的验证流程与通过标准
 - `docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md`
   - 动态验证模板，统一 scroll / click-state / sticky / hover 的采样方式
+- `docs/MOTION_FINAL_VALIDATION.zh-CN.md`
+  - motion MVP 的最终验证流与验收结论
 - `references/`
   - benchmark 经验库、风格维度、决策规则、更新 workflow
 - `templates/`
@@ -214,6 +216,7 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 如果你想按统一格式记录动态 benchmark，再配合：
 
 - [docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md](./docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md)
+- [docs/MOTION_FINAL_VALIDATION.zh-CN.md](./docs/MOTION_FINAL_VALIDATION.zh-CN.md)
 
 这份模板不是教模型“怎么做动画”，而是把“怎么观察滚动叙事、click-state、sticky、tab、gallery 和原位状态变化”固化成可复用流程。
 
