@@ -45,6 +45,7 @@
 - [MasterClass](https://www.masterclass.com/)
 - [The Pudding](https://pudding.cool/)
 - [MoMA](https://www.moma.org/)
+- [Fondation Cartier](https://www.fondationcartier.com/en)
 
 不是照抄视觉，而是提炼它们共同的系统能力：
 
@@ -148,6 +149,7 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 - `playful-data-essay` 是专门的互动叙事分支，不默认混入大多数普通项目
 - `editorial-museum` 与 `mission-data` 也能吸收 Apple Environment 这种“明亮底色 + 证据组织 + 公共事务 brief”型参考，而不必只靠暗场或大片建立高级感
 - `editorial-museum` 进一步吸收了 MoMA 的“馆藏目录级元信息 / 展厅与楼层定位 / 作品标签系统”能力
+- `editorial-museum` 也吸收了 Fondation Cartier 的“品牌化纯色场 / 海报式机构首页 / Visit 与 Programme 并存的文化机构入口”能力
 
 ## 开源说明
 

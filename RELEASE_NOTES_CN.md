@@ -1,5 +1,23 @@
 # 发布说明
 
+## v1.6.2
+
+这个版本没有新增 style option，而是把 [Fondation Cartier](https://www.fondationcartier.com/en) 的“品牌化文化机构首页”能力吸收进了现有 `editorial-museum` 分支。
+
+### 本版新增
+
+- `references/benchmark-library.md` 新增 Fondation Cartier benchmark 条目
+- `references/style-options.yaml` 与 `STYLE_OPTIONS.md` 强化 `editorial-museum`
+- `PROMPT.md` 补上文化机构海报感、品牌化纯色场，以及 `Visit / Programme / Tickets / Shop` 共存的入口结构
+
+### 这次补强了什么
+
+Fondation Cartier 证明 `editorial-museum` 不必只等于“安静白底的博物馆网站”。它还能兼容：
+
+- 更强的品牌色场和海报式超大标题
+- 更公开的 visit / programme / ticketing / shop 入口
+- 仍然保持 museum-grade 的内容系统和正式元信息秩序
+
 ## v1.6.1
 
 这个版本没有新增 style option，而是把 [MoMA](https://www.moma.org/) 的机构化图录能力吸收进了现有 `editorial-museum` 分支。

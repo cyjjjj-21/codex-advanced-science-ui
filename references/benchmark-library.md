@@ -83,6 +83,25 @@
   - 容易被误学成普通白底 CMS 或文化机构官网，忽略它真正厉害的是标签系统、作品编目和内容类型的一致性
   - 也容易只抄“安静”和“白底”，却丢掉机构化阅读的精确层级
 
+## Fondation Cartier
+
+- 归属判断：强化 `editorial-museum`；不新增 option
+- 首页学习重点：
+  - 首页允许比传统 museum 站更品牌化、更海报化：高饱和纯色场、超大标题、强机构 logo 和公开入口可以同时成立
+  - `Visit / Programme / Tickets / Shop` 这些面向公众的功能入口不会破坏高级感，只要它们被放进统一的机构排版秩序
+  - 首屏像文化机构海报而不是“展览 CMS 列表”，但仍保留时间、地点、活动身份这些正式元信息
+- 内容页学习重点：
+  - Collection、artist page、architecture page 仍然是典型的机构化内容系统：艺术家、作品、展览、建筑、出版物等内容彼此可编目、可跳转
+  - 它不像 The Pudding 那样每篇重做交互机制，而是用稳定的机构框架容纳更鲜明的品牌气质
+  - 内容页高级感来自图录逻辑和机构关系网，而不是单纯靠时尚视觉压场
+- 对 skill 的核心贡献：
+  - 给 `editorial-museum` 补上“高时尚基金会 / 文化机构海报感”这条支线
+  - 证明 museum 气质不一定只能安静白底，也可以是强品牌色场 + 正式元信息并存
+  - 让文化机构首页能更公开地整合 visit、programme、ticketing 和 shop，而不掉成商业售票页
+- 风险提醒：
+  - 容易被误学成只剩大色块和时尚排版，丢掉内容页的机构化阅读秩序
+  - 也容易被误学成品牌 campaign page，而忽略它本质上仍是 museum-grade content system
+
 ## The Pudding
 
 - 归属判断：升级为新 option `playful-data-essay`

@@ -30,10 +30,12 @@ options:
       - Brooklyn Museum
       - Apple Environment
       - MoMA
+      - Fondation Cartier
     use_when:
       - 需要图录感、策展感、长阅读稳定性
       - 需要明亮、克制、证据导向的公共事务型科学内容页
       - 需要馆藏标签、楼层/展厅信息、作者/年份/材质等机构化元信息
+      - 需要更品牌化、更海报化的文化机构首页，但内容页仍保持机构化阅读秩序
       - 更重视排版节奏与安静高级感
     avoid:
       - 过度留白导致信息失重
