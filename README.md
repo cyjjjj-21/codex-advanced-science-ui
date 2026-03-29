@@ -81,6 +81,8 @@
   - skill 的 v1.5 / v2 演进路线图
 - `docs/VALIDATION.zh-CN.md`
   - v1.5 升级后的验证流程与通过标准
+- `docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md`
+  - 动态验证模板，统一 scroll / click-state / sticky / hover 的采样方式
 - `references/`
   - benchmark 经验库、风格维度、决策规则、更新 workflow
 - `templates/`
@@ -209,6 +211,12 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 - 明显异类风格是否会触发新 option 询问
 - 新增 option 后，显式调用是否能稳定落到新分支
 
+如果你想按统一格式记录动态 benchmark，再配合：
+
+- [docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md](./docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md)
+
+这份模板不是教模型“怎么做动画”，而是把“怎么观察滚动叙事、click-state、sticky、tab、gallery 和原位状态变化”固化成可复用流程。
+
 ## v1.5 结构说明
 
 v1.5 开始，仓库会逐步形成“工作流层 + 经验库层 + prompt 层 + option 层”的结构：
@@ -227,3 +235,5 @@ v1.5 开始，仓库会逐步形成“工作流层 + 经验库层 + prompt 层 +
   - 维护结构化 option 元数据
 - `references/decision-rules.md`
   - 定义“补强已有风格 / 修正已有风格 / 新增风格候选”的判断标准
+- `templates/motion-classification-note.md`
+  - 统一输出“强化已有风格 / 修正已有风格 / 新候选，暂不升格 / 建议升格新 option”的结论格式

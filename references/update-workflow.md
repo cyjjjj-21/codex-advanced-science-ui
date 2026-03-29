@@ -10,7 +10,40 @@
    - 必要时补看第二个内容页，避免误判
    - 如果该站的高级感明显依赖动态体验，必须额外观察滚动、hover、sticky、reveal 或 click 后状态变化
 
-2. 按统一维度记录
+2. 首页与内容页静态观察
+   - 先按静态页面系统判断：
+     - 首页怎样建立世界观
+     - 内容页怎样维持统一气质
+     - 图像、元信息、术语、数据如何共存
+   - 不要一上来就把“会动”当成全部结论
+
+3. Scroll 状态采样
+   - 至少采样 `0% / 25% / 50% / 75%` 四个关键帧
+   - 记录：
+     - 当前主标题或主视觉
+     - 是否存在 sticky local nav / pinned control
+     - 滚动是否真正改变叙事结构
+
+4. Click-State Sweep
+   - 对明显交互型站点，至少选择 `2 到 5` 个代表性点击目标
+   - 对每个目标记录：
+     - 触发前状态
+     - 触发动作
+     - 触发后状态
+     - 类型判断
+   - 类型只能在以下集合中选择：
+     - `modal`
+     - `inline update`
+     - `sticky sync`
+     - `parameter swap`
+     - `reveal panel`
+     - `drill-down`
+
+5. Sticky / Tab / Gallery 检查
+   - 至少确认一个 sticky、tab、hash gallery 或 staged reveal 行为
+   - 判断它是辅助阅读，还是已经构成新的阅读哲学
+
+6. 按统一维度记录
    - 参考 `style-axes.yaml`
    - 记录这个站在首页叙事、内容页系统、图像策略、排版节奏、元信息、数据表达和动态交互语言上的特点
    - 如果动态特征明显，至少补齐：
@@ -24,21 +57,29 @@
      - 记录它们属于 modal、inline update、sticky sync、parameter swap、reveal panel 或 drill-down 的哪一类
      - 判断这些点击后状态变化是在补强解释，还是已经构成新的阅读范式
 
-3. 对比现有 option
+7. 对比现有 option
    - 判断它最接近哪个现有 option
    - 判断它是在强化已有 option，还是在挑战现有分类
    - 新增风格判断时，同时参考静态维度和动态维度，不只看截图
 
-4. 写入 benchmark library
+8. 写入 benchmark library
    - 使用 `templates/benchmark-entry.md`
    - 先把观察沉淀成案例条目，再考虑更新 prompt
    - 如果动态体验是该站的重要组成，条目中必须显式写出“动态交互学习重点”“click-state sweep 结果”和“动态风险提醒”
 
-5. 判断是否要询问用户
+9. 输出分类结论
+   - 使用 `templates/motion-classification-note.md`
+   - 结论只能落在这四类之一：
+     - 强化已有风格
+     - 修正已有风格
+     - 新候选，暂不升格
+     - 建议升格新 option
+
+10. 判断是否要询问用户
    - 如果明显偏离现有 option，先问用户是否要新建 style option
    - 如果只是补强现有分类，直接更新经验库和 prompt 草稿
 
-6. 更新稳定 prompt
+11. 更新稳定 prompt
    - 仅把跨站稳定规律写入 `PROMPT.md`
    - 单站点特性优先留在 benchmark library，不要全部升格进主 prompt
 

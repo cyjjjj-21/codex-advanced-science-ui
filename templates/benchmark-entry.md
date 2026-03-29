@@ -38,13 +38,32 @@
 - editorialness:
 - industrialness:
 
+### 动态验证最小采样
+
+- scroll 关键帧：
+  - 0%：
+  - 25%：
+  - 50%：
+  - 75%：
+- sticky / tab / gallery 检查：
+- hover / cursor 检查：
+
 ### 动态交互学习重点
 
 -
 
 ### Click-State Sweep 结果
 
-- 点击目标：
+- 点击目标 1：
+  - 触发前状态：
+  - 触发动作：
+  - 触发后状态：
+  - 类型：modal / inline update / sticky sync / parameter swap / reveal panel / drill-down
+  - 结果：
+- 点击目标 2：
+  - 触发前状态：
+  - 触发动作：
+  - 触发后状态：
   - 类型：modal / inline update / sticky sync / parameter swap / reveal panel / drill-down
   - 结果：
 
