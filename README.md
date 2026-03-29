@@ -40,6 +40,8 @@
   - UI 元数据与默认 prompt
 - `PROMPT.md`
   - 一段可直接复用的中文高阶提示词
+- `STYLE_OPTIONS.md`
+  - 当前支持的风格 option 与调用方式
 - `RELEASE_NOTES_CN.md`
   - 中文发布说明与设计来龙去脉
 - `LICENSE`
@@ -50,6 +52,10 @@
   - skill 预览图
 - `docs/ROADMAP.zh-CN.md`
   - skill 的 v1.5 / v2 演进路线图
+- `references/`
+  - benchmark 经验库、风格维度、决策规则、更新 workflow
+- `templates/`
+  - 新 benchmark 和新 style option 的记录模板
 
 ## 预览图
 
@@ -108,6 +114,11 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 
 如果只有第一页惊艳、后面全是常规文章流，那就说明这个 skill 还没有真正生效。
 
+从 v1.5 开始，这个 skill 还增加了两种能力：
+
+- 能把新 benchmark 网站按统一框架吸收进经验库
+- 遇到明显异类风格时，会先询问要不要升级成新的 style option，而不是直接硬混进默认 prompt
+
 ## 开源说明
 
 本仓库使用 MIT 协议发布：
@@ -125,7 +136,7 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 
 这个 skill 不是一次性 prompt，而是会持续打磨的设计能力。当前已经把后续的 `v1.5 / v2` 升级计划整理成 roadmap：
 
-- [docs/ROADMAP.zh-CN.md](/Users/chenyuanjie/developer/codex-advanced-science-ui/docs/ROADMAP.zh-CN.md)
+- [docs/ROADMAP.zh-CN.md](./docs/ROADMAP.zh-CN.md)
 
 这份 roadmap 主要回答 4 个问题：
 
@@ -133,3 +144,20 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 - 学习结果如何沉淀进经验库和 prompt
 - 什么时候需要把新风格升级成 option
 - v1.5 和 v2 的边界、目标和进入条件分别是什么
+
+## v1.5 结构说明
+
+v1.5 开始，仓库会逐步形成“工作流层 + 经验库层 + prompt 层 + option 层”的结构：
+
+- `SKILL.md`
+  - 定义如何使用 skill、何时询问用户、何时学习 benchmark
+- `PROMPT.md`
+  - 提供稳定版 prompt
+- `STYLE_OPTIONS.md`
+  - 提供当前风格大类
+- `references/benchmark-library.md`
+  - 沉淀参考网站的首页 + 内容页学习结果
+- `references/style-axes.yaml`
+  - 定义统一观察维度
+- `references/decision-rules.md`
+  - 定义“补强已有风格 / 修正已有风格 / 新增风格候选”的判断标准

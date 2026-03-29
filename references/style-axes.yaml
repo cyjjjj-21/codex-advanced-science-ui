@@ -1,0 +1,42 @@
+version: 1
+description: >
+  advanced-science-ui 的统一风格分析维度。新增 benchmark 时，先沿这些轴观察，
+  再决定它是在强化现有 option，还是需要升级成新的风格分支。
+
+axes:
+  hero_narrative:
+    label: 首页叙事方式
+    question: 首页是海报式建立世界观，还是目录式分发内容？
+  content_page_system:
+    label: 内容页系统性
+    question: 内容页是否维持同一气质并能承载长内容、元信息、图注和媒体？
+  typography_voice:
+    label: 排版气质
+    question: 标题和正文是否形成稳定、成熟、明确的层级语言？
+  image_strategy:
+    label: 图像策略
+    question: 图像是在装饰页面，还是承担叙事和结构功能？
+  grid_rhythm:
+    label: 栅格与节奏
+    question: 页面是否通过比例、对齐、宽窄变化和留白形成稳定节奏？
+  metadata_behavior:
+    label: 元信息行为
+    question: 日期、作者、任务名、标签、读时等元信息是否像同一系统的一部分？
+  data_expression:
+    label: 数据表达
+    question: 指标、图示、术语、参数是否以可信、克制、统一的方式出现？
+  cta_tone:
+    label: CTA 语气
+    question: 行动引导是否清楚但克制，不破坏整体气质？
+  motion_density:
+    label: 动效密度
+    question: 动效是服务叙事，还是只是制造热闹？
+  cinematicness:
+    label: 电影感
+    question: 页面是否有显著的海报感、场景感和沉浸式压场能力？
+  editorialness:
+    label: 编辑感
+    question: 页面是否像出版物、图录或策展内容系统？
+  industrialness:
+    label: 工业/工程感
+    question: 技术感是否来自结构精度、模块秩序和信息可信度？

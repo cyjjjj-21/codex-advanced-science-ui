@@ -1,0 +1,57 @@
+version: 1
+default_option: auto-hybrid
+
+options:
+  - id: auto-hybrid
+    label: 自动混合
+    type: default
+    use_when:
+      - 用户没有明确指定风格
+      - 希望自动在电影感、编辑感和工程秩序之间找到主次
+    rules:
+      - 必须先确定一个主方向，再允许少量辅方向
+      - 不允许把所有 option 平均混在一起
+
+  - id: cinematic-narrative
+    label: 电影叙事
+    sources:
+      - OceanX
+    use_when:
+      - 需要沉浸式主视觉
+      - 页面靠场景、环境、任务现场建立世界观
+    avoid:
+      - 廉价未来风
+      - 过度发光边框
+
+  - id: editorial-museum
+    label: 编辑博物馆
+    sources:
+      - Brooklyn Museum
+    use_when:
+      - 需要图录感、策展感、长阅读稳定性
+      - 更重视排版节奏与安静高级感
+    avoid:
+      - 过度留白导致信息失重
+      - 空洞的“高冷感”
+
+  - id: mission-data
+    label: 任务数据
+    sources:
+      - NASA JPL
+    use_when:
+      - 需要任务简报、研究报告、工程可信度
+      - 有较多元信息、术语、参数和数据容器
+    avoid:
+      - SaaS dashboard 感
+      - 营销徽章堆叠
+
+  - id: image-led-premium
+    label: 图像主导高级感
+    sources:
+      - MasterClass
+    use_when:
+      - 高质量人物或主题摄影承担主叙事
+      - 需要海报感、详情页质感和克制的转化
+    avoid:
+      - 普通课程售卖页
+      - 只有封面页高级
