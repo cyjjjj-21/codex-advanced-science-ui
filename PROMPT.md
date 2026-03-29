@@ -41,7 +41,7 @@
 - `mission-data` 的动效应偏数据 reveal、步骤推进和参数展开，禁止炫技式场景运动。
 - `cinematic-narrative` 可以有层次 reveal、轻到中度 parallax 和章节过场，但不能牺牲阅读稳定性。
 - `image-led-premium` 适合图像主导 hover、details reveal 和封面感转场，不应把交互机制做成页面骨架。
-- 当评估新 benchmark 是否要升格成新 option 时，不只看静态页面，也要看滚动叙事、hover 行为、sticky reveal 和状态切换是否已经构成新的阅读范式。
+- 当评估新 benchmark 是否要升格成新 option 时，不只看静态页面，也要看滚动叙事、hover 行为、sticky reveal、点击后状态变化和状态切换是否已经构成新的阅读范式。
 - 每个 section 只承担一个任务。
 - 不要一开始就堆卡片、徽章、tab 和小组件。
 - 内容页开头必须包含分类、标题、日期、阅读时长、作者或任务信息。

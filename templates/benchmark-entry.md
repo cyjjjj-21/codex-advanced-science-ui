@@ -31,6 +31,7 @@
 - scroll_narrative:
 - hover_behavior:
 - state_transition_style:
+- click_state_pattern:
 - cursor_interaction:
 - sticky_reveal_behavior:
 - cinematicness:
@@ -40,6 +41,12 @@
 ### 动态交互学习重点
 
 -
+
+### Click-State Sweep 结果
+
+- 点击目标：
+  - 类型：modal / inline update / sticky sync / parameter swap / reveal panel / drill-down
+  - 结果：
 
 ### 动态风险提醒
 

@@ -40,6 +40,9 @@ axes:
   state_transition_style:
     label: 状态切换风格
     question: 展开、切换、reveals 和 step changes 是克制过渡，还是强编排式转场？
+  click_state_pattern:
+    label: 点击状态模式
+    question: 点击后主要出现的是弹层、原位切换、参数同步、局部刷新，还是新的阅读面板？
   cursor_interaction:
     label: 鼠标/指针交互
     question: 鼠标移动只是细节点缀，还是会驱动页面结构、镜头或内容探索？
