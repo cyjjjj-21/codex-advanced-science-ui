@@ -12,7 +12,7 @@
 
 - `auto-hybrid`：自动选择主方向，再少量引入辅方向
 - `cinematic-narrative`：偏 OceanX，沉浸、暗场、电影感、现场叙事
-- `editorial-museum`：偏 Brooklyn Museum / Apple Environment，留白、图录感、出版物秩序、公共事务 brief 气质
+- `editorial-museum`：偏 Brooklyn Museum / Apple Environment / MoMA，留白、图录感、出版物秩序、公共事务 brief、馆藏目录级元信息
 - `mission-data`：偏 NASA JPL，并吸收 Apple Environment 的证据组织方式，强调任务简报、结构精度、数据可信度
 - `image-led-premium`：偏 MasterClass，图像主导、海报感、非对称详情页
 - `playful-data-essay`：偏 The Pudding，定制交互、视觉隐喻、参与式阅读、杂志化数据故事
@@ -33,6 +33,7 @@
 - 如果主张本身已经足够强，可以直接用“年度目标 + 一个关键数字 + 一句解释”构成首屏主视觉，不必强行加大图。
 - 用全幅媒体、非对称栅格和滚动节奏建立叙事。
 - 对科研、环境、工程传播主题，允许用 `Approach / Progress`、`承诺 / 证据` 这类配对结构组织长段内容。
+- 对博物馆、馆藏、标本、档案型内容，允许把楼层/展厅信息、作品标签、馆藏编号、创作时间、材质和安装历史组织成安静而正式的阅读系统。
 - 如果选择 `playful-data-essay`，允许把“交互机制本身”当成叙事骨架，例如视角切换、拖拽探索、逐步揭示、可玩的视觉隐喻。
 - 每个 section 只承担一个任务。
 - 不要一开始就堆卡片、徽章、tab 和小组件。
@@ -42,6 +43,7 @@
 - 图片、视频、地图、图示、3D 模型都要像正文叙事的一部分。
 - 图注要像展签或科研图注，短、准、安静。
 - 脚注、方法说明、报告 PDF 和白皮书链接必须融入页面秩序，不能像法律页脚一样被随手丢到底部。
+- 内容页里的元信息可以很丰富，但必须像馆藏标签或机构化编目系统，而不是堆成卡片和 badge。
 
 排版规则：
 

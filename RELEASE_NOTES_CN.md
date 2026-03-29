@@ -1,5 +1,23 @@
 # 发布说明
 
+## v1.6.1
+
+这个版本没有新增 style option，而是把 [MoMA](https://www.moma.org/) 的机构化图录能力吸收进了现有 `editorial-museum` 分支。
+
+### 本版新增
+
+- `references/benchmark-library.md` 新增 MoMA benchmark 条目
+- `references/style-options.yaml` 与 `STYLE_OPTIONS.md` 强化 `editorial-museum`
+- `PROMPT.md` 补上馆藏目录级元信息、展厅/楼层定位、作品标签系统这类能力
+
+### 这次补强了什么
+
+MoMA 让这条分支更像真实博物馆网站，而不只是“安静留白的高级感”。新增的重点不是表面风格，而是：
+
+- 馆藏标签系统
+- 作者 / 年份 / 材质 / 安装历史等正式元信息
+- 展览页、作品页、杂志页三种内容类型仍然共用同一套机构化阅读秩序
+
 ## v1.6.0
 
 这个版本把 [The Pudding](https://pudding.cool/) 升级成了新的 style option：`playful-data-essay`。
