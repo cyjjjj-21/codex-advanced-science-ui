@@ -11,6 +11,7 @@ options:
     rules:
       - 必须先确定一个主方向，再允许少量辅方向
       - 不允许把所有 option 平均混在一起
+      - 除非任务明显要求互动式 visual essay 或可玩数据叙事，否则不要默认混入 playful-data-essay
 
   - id: cinematic-narrative
     label: 电影叙事
@@ -27,8 +28,10 @@ options:
     label: 编辑博物馆
     sources:
       - Brooklyn Museum
+      - Apple Environment
     use_when:
       - 需要图录感、策展感、长阅读稳定性
+      - 需要明亮、克制、证据导向的公共事务型科学内容页
       - 更重视排版节奏与安静高级感
     avoid:
       - 过度留白导致信息失重
@@ -38,9 +41,11 @@ options:
     label: 任务数据
     sources:
       - NASA JPL
+      - Apple Environment
     use_when:
       - 需要任务简报、研究报告、工程可信度
       - 有较多元信息、术语、参数和数据容器
+      - 需要把方法论、脚注和证据链纳入主叙事
     avoid:
       - SaaS dashboard 感
       - 营销徽章堆叠
@@ -55,3 +60,15 @@ options:
     avoid:
       - 普通课程售卖页
       - 只有封面页高级
+
+  - id: playful-data-essay
+    label: 可玩数据随笔
+    sources:
+      - The Pudding
+    use_when:
+      - 需要 explorable explanation 或互动式 visual essay
+      - 需要用定制机制而不是标准模块来讲述数据洞察
+      - 题目本身适合读者参与、切换视角、逐步探索
+    avoid:
+      - 儿童化或玩具化
+      - 只有 gimmick 没有洞察

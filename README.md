@@ -16,6 +16,24 @@
 - 首页的电影海报感
 - 内容页的编辑系统感
 - 科学信息的可信度与秩序感
+- 以及在需要时，用成熟的互动式 visual essay 讲故事
+
+## 当前能力
+
+这个 skill 现在不只是“一段 prompt”，而是一套可迭代的设计能力，已经具备：
+
+- 默认 `auto-hybrid`
+  - 用户不指定风格时，自动判断主方向与辅方向
+- 显式 `style option`
+  - 当前支持 `cinematic-narrative`、`editorial-museum`、`mission-data`、`image-led-premium`、`playful-data-essay`
+- benchmark 学习
+  - 新参考网站会同时看首页和内容页，再写入经验库
+- 风格分流
+  - 遇到明显异类风格时，会先判断是否该升级成新的 option，而不是硬混进默认模式
+- 结构化知识层
+  - benchmark、style option、prompt、decision rules、validation 分层维护
+- 执行优先
+  - 当用户已经明确要 PNG、页面或截图时，优先直接执行，不先兜售额外流程
 
 ## 参考来源
 
@@ -25,12 +43,14 @@
 - [Brooklyn Museum](https://www.brooklynmuseum.org/)
 - [NASA JPL](https://www.jpl.nasa.gov/)
 - [MasterClass](https://www.masterclass.com/)
+- [The Pudding](https://pudding.cool/)
 
 不是照抄视觉，而是提炼它们共同的系统能力：
 
 - 首屏建立世界观
 - 长文内容依然高级
 - 图像、数据、术语、图注和 CTA 属于同一套语言
+- 在需要的时候，用定制交互把洞察变成可探索体验
 
 ## 仓库结构
 
@@ -121,6 +141,11 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 - 能把新 benchmark 网站按统一框架吸收进经验库
 - 遇到明显异类风格时，会先询问要不要升级成新的 style option，而不是直接硬混进默认 prompt
 
+现在进一步补上了两条边界：
+
+- `playful-data-essay` 是专门的互动叙事分支，不默认混入大多数普通项目
+- `editorial-museum` 与 `mission-data` 也能吸收 Apple Environment 这种“明亮底色 + 证据组织 + 公共事务 brief”型参考，而不必只靠暗场或大片建立高级感
+
 ## 开源说明
 
 本仓库使用 MIT 协议发布：
@@ -159,6 +184,7 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 - 显式 style option 是否真的改变输出
 - 新 benchmark 是否会落进经验库
 - 明显异类风格是否会触发新 option 询问
+- 新增 option 后，显式调用是否能稳定落到新分支
 
 ## v1.5 结构说明
 
@@ -174,5 +200,7 @@ v1.5 开始，仓库会逐步形成“工作流层 + 经验库层 + prompt 层 +
   - 沉淀参考网站的首页 + 内容页学习结果
 - `references/style-axes.yaml`
   - 定义统一观察维度
+- `references/style-options.yaml`
+  - 维护结构化 option 元数据
 - `references/decision-rules.md`
   - 定义“补强已有风格 / 修正已有风格 / 新增风格候选”的判断标准

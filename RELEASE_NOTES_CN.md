@@ -1,5 +1,23 @@
 # 发布说明
 
+## v1.6.0
+
+这个版本把 [The Pudding](https://pudding.cool/) 升级成了新的 style option：`playful-data-essay`。
+
+它不再被当作现有 museum / mission / cinematic 分支的补丁，而是作为一条单独的“互动式 visual essay / explorable explanation”路线保留下来。
+
+### 本版新增
+
+- 新 option：`playful-data-essay`
+- `STYLE_OPTIONS.md` 增加对应说明、适用场景和禁忌项
+- `PROMPT.md` 增加对互动式 visual essay 的触发与边界规则
+- `references/benchmark-library.md` 新增 The Pudding benchmark 条目
+- `references/style-options.yaml` 增加结构化 option 定义
+
+### 为什么不混进默认模式
+
+The Pudding 的强项是“一个洞察配一个定制机制”，它和现有 `editorial-museum`、`mission-data` 的稳定内容系统思路不同。如果直接混入默认 `auto-hybrid`，容易把大多数普通科普页面带偏成过度交互、过度 playful 的方向。
+
 ## v0.1.0
 
 这是 `codex-advanced-science-ui` 的首个公开版本。

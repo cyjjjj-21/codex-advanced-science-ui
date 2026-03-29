@@ -121,18 +121,20 @@ codex-advanced-science-ui/
 
 #### 默认风格 option
 
-v1.5 先内置以下 5 类：
+当前内置以下 6 类：
 
 - `auto-hybrid`
 - `cinematic-narrative`
 - `editorial-museum`
 - `mission-data`
 - `image-led-premium`
+- `playful-data-essay`
 
 其中：
 
 - `auto-hybrid` 作为默认模式
-- 其余 4 类对应当前已经验证过的主审美来源
+- `playful-data-essay` 作为更专门的互动叙事分支，不默认混入大多数任务
+- 其余几类对应当前已经验证过的主审美来源
 
 #### 用户交互规则
 
@@ -152,7 +154,7 @@ v1.5 先内置以下 5 类：
 v1.5 完成后，应满足以下条件：
 
 - 新参考网站可以被写入统一结构，而不是自由散文式总结
-- 当前 4 个 benchmark 可以被重新整理进经验库
+- 当前 benchmark 与 style option 可以被持续整理进经验库，并保持文档与结构化元数据一致
 - `PROMPT.md` 仍可独立工作，不依赖人工口头解释
 - skill 能区分“默认自动模式”和“显式指定风格模式”
 - 当出现明显异类参考时，skill 会先问，不会直接把新风格硬塞进默认经验

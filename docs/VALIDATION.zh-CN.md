@@ -58,11 +58,16 @@
 用 $advanced-science-ui，偏 editorial-museum，做一个矿物标本数字图录页。
 ```
 
+```text
+用 $advanced-science-ui，偏 playful-data-essay，做一个“城市鸟类迁徙路径”的互动数据故事页。
+```
+
 预期：
 
 - 两者风格差异肉眼可辨
 - 两者都直接进入执行
 - 不弹 visual companion
+- `playful-data-essay` 会把交互机制本身当成叙事骨架，而不是只换一层配色
 
 ### 3. 补强已有风格验证
 
