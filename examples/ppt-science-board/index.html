@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPT Science Board</title>
+    <style>
+      :root {
+        --bg: #efe5d6;
+        --ink: #0f1a22;
+        --muted: #5f6a70;
+        --accent: #d84f2a;
+        --panel: #f7f1e8;
+        --line: rgba(15, 26, 34, 0.14);
+        --navy: #132b3b;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif;
+        background:
+          radial-gradient(circle at 84% 18%, rgba(216, 79, 42, 0.16), transparent 18%),
+          linear-gradient(135deg, #f4ece0 0%, #ebe1d0 54%, #d9d2c6 100%);
+        color: var(--ink);
+      }
+      .slide {
+        position: relative;
+        width: 1600px;
+        height: 900px;
+        overflow: hidden;
+        padding: 44px 48px;
+      }
+      .frame {
+        position: absolute;
+        inset: 28px;
+        border: 1px solid rgba(15, 26, 34, 0.1);
+        pointer-events: none;
+      }
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: var(--accent);
+        box-shadow: 20px 0 0 rgba(19, 43, 59, 0.28);
+      }
+      .hero {
+        margin-top: 42px;
+        display: grid;
+        grid-template-columns: 1.18fr 0.82fr;
+        gap: 32px;
+      }
+      .headline {
+        padding-right: 28px;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 18px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 78px;
+        line-height: 0.94;
+        letter-spacing: -0.05em;
+      }
+      .deck {
+        margin-top: 22px;
+        max-width: 680px;
+        color: #334149;
+        font-size: 24px;
+        line-height: 1.5;
+      }
+      .meta {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+      .meta-item {
+        padding-top: 14px;
+        border-top: 1px solid var(--line);
+      }
+      .meta-label {
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+      .meta-value {
+        font-size: 22px;
+        line-height: 1.25;
+      }
+      .right {
+        display: grid;
+        grid-template-rows: 322px auto;
+        gap: 22px;
+        align-self: start;
+      }
+      .planet {
+        position: relative;
+        border-radius: 28px;
+        background:
+          radial-gradient(circle at 34% 32%, rgba(255, 255, 255, 0.68), transparent 16%),
+          radial-gradient(circle at 60% 46%, rgba(216, 79, 42, 0.68), transparent 22%),
+          radial-gradient(circle at 50% 50%, #28485b 0%, #183142 48%, #0d1820 100%);
+        overflow: hidden;
+      }
+      .planet::before {
+        content: "";
+        position: absolute;
+        width: 380px;
+        height: 380px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border-radius: 999px;
+        left: 120px;
+        top: 10px;
+      }
+      .planet::after {
+        content: "";
+        position: absolute;
+        inset: 28px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 24px;
+      }
+      .coords {
+        position: absolute;
+        left: 30px;
+        bottom: 26px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 15px;
+        line-height: 1.6;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .bottom {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 18px;
+        align-items: start;
+      }
+      .stats, .notes {
+        background: rgba(255,255,255,0.46);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(15,26,34,0.08);
+        border-radius: 24px;
+        padding: 20px 22px;
+      }
+      .section-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: var(--muted);
+        margin-bottom: 18px;
+      }
+      .stat {
+        display: grid;
+        grid-template-columns: 108px 1fr;
+        gap: 16px;
+        align-items: start;
+        padding: 14px 0 12px;
+        border-top: 1px solid var(--line);
+      }
+      .stat-num {
+        font-size: 36px;
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+      .stat-copy {
+        font-size: 16px;
+        line-height: 1.55;
+        color: #49565d;
+      }
+      .notes p {
+        margin: 0 0 14px;
+        font-size: 17px;
+        line-height: 1.58;
+      }
+      .quote {
+        color: var(--navy);
+        font-size: 20px !important;
+        line-height: 1.55 !important;
+      }
+      .footer {
+        position: absolute;
+        left: 48px;
+        right: 48px;
+        bottom: 32px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="slide">
+      <div class="frame"></div>
+      <div class="topbar">
+        <div class="brand">Atlas Research Brief</div>
+        <div>Single-Slide Template / 16:9</div>
+      </div>
+
+      <section class="hero">
+        <div class="headline">
+          <div class="eyebrow">Cryosphere Mission / 07</div>
+          <h1>冻结边界正在后退，<br />但数据第一次开始<br />真正发声。</h1>
+          <p class="deck">
+            用一页展板同时容纳任务背景、关键数字、场景视觉与研究摘要，
+            适合科学汇报、展览导览页和高密度科普演讲开场。
+          </p>
+          <div class="meta">
+            <div class="meta-item">
+              <div class="meta-label">研究海域</div>
+              <div class="meta-value">北冰洋边缘带</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">观测周期</div>
+              <div class="meta-value">2026.05 — 2026.09</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">主讲单元</div>
+              <div class="meta-value">Climate Imaging Lab</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="planet">
+            <div class="coords">
+              sector 03 / polar shelf<br />
+              ice edge variance +14.8%<br />
+              salinity anomaly 0.7 psu
+            </div>
+          </div>
+
+          <div class="bottom">
+            <div class="stats">
+              <div class="section-title">核心指标</div>
+              <div class="stat">
+                <div class="stat-num">12</div>
+                <div class="stat-copy">条关键断面被重新扫描，生成连续剖面数据。</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">4.7TB</div>
+                <div class="stat-copy">多源影像与声学记录汇总入同一任务档案。</div>
+              </div>
+              <div class="stat">
+                <div class="stat-num">91%</div>
+                <div class="stat-copy">异常边界识别模型在人工校核中保持高一致。</div>
+              </div>
+            </div>
+            <div class="notes">
+              <div class="section-title">摘要与引语</div>
+              <p>
+                版式重点是“展板感”而不是“PPT 模板感”：标题足够大，数据足够硬，
+                留白和边界足够克制。
+              </p>
+              <p class="quote">“让一页就能建立科学问题的重量、证据和现场感。”</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="footer">
+        <span>Advanced Science UI / Slide Board</span>
+        <span>01</span>
+      </div>
+    </main>
+  </body>
+</html>

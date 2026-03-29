@@ -48,6 +48,8 @@
   - MIT 许可证中文说明版
 - `assets/preview.svg`
   - skill 预览图
+- `docs/ROADMAP.zh-CN.md`
+  - skill 的 v1.5 / v2 演进路线图
 
 ## 预览图
 
@@ -118,3 +120,16 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 首个公开版本的整理说明见：
 
 - `RELEASE_NOTES_CN.md`
+
+## 路线图
+
+这个 skill 不是一次性 prompt，而是会持续打磨的设计能力。当前已经把后续的 `v1.5 / v2` 升级计划整理成 roadmap：
+
+- [docs/ROADMAP.zh-CN.md](/Users/chenyuanjie/developer/codex-advanced-science-ui/docs/ROADMAP.zh-CN.md)
+
+这份 roadmap 主要回答 4 个问题：
+
+- 新 benchmark 网站以后怎么被吸收
+- 学习结果如何沉淀进经验库和 prompt
+- 什么时候需要把新风格升级成 option
+- v1.5 和 v2 的边界、目标和进入条件分别是什么

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portrait Editorial Science Page</title>
+    <style>
+      :root {
+        --paper: #f7f2e8;
+        --ink: #11181d;
+        --muted: #606a70;
+        --accent: #a33a1c;
+        --stone: #d7cdc0;
+        --line: rgba(17, 24, 29, 0.12);
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif;
+        background:
+          radial-gradient(circle at 84% 9%, rgba(163,58,28,0.14), transparent 18%),
+          linear-gradient(180deg, #faf6ef 0%, #f4ede1 36%, #efe7da 100%);
+        color: var(--ink);
+      }
+      .page {
+        width: 430px;
+        margin: 0 auto;
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+      .page::before {
+        content: "";
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: 430px;
+        height: 100vh;
+        pointer-events: none;
+        border-left: 1px solid rgba(17,24,29,0.05);
+        border-right: 1px solid rgba(17,24,29,0.05);
+      }
+      header {
+        padding: 22px 24px 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .hero-media {
+        margin: 6px 18px 0;
+        height: 310px;
+        border-radius: 28px;
+        background:
+          radial-gradient(circle at 36% 28%, rgba(255,255,255,0.62), transparent 18%),
+          linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+          linear-gradient(150deg, #3f5863, #14252f 60%, #0d171d 100%);
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-media::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.18);
+        right: -18px;
+        top: 28px;
+      }
+      .hero-copy {
+        padding: 24px 24px 0;
+      }
+      .eyebrow {
+        color: var(--accent);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 48px;
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+      }
+      .deck {
+        margin: 16px 0 0;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #39454c;
+      }
+      .meta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 20px;
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+      }
+      .meta .k {
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 6px;
+      }
+      .meta .v {
+        font-size: 16px;
+        line-height: 1.45;
+      }
+      section {
+        padding: 28px 24px 0;
+      }
+      h2 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.14;
+        letter-spacing: -0.04em;
+      }
+      p {
+        margin: 14px 0 0;
+        font-size: 18px;
+        line-height: 1.9;
+        color: #38434a;
+      }
+      .term {
+        margin-top: 18px;
+        padding: 16px 0 0;
+        border-top: 1px solid var(--line);
+      }
+      .term-label {
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+      .term-value {
+        margin-top: 8px;
+        font-size: 20px;
+        line-height: 1.7;
+      }
+      .stats {
+        margin: 24px 0 0;
+        display: grid;
+        gap: 12px;
+      }
+      .stat {
+        padding: 16px 0;
+        border-top: 1px solid var(--line);
+      }
+      .stat strong {
+        font-size: 34px;
+        line-height: 1;
+        letter-spacing: -0.05em;
+      }
+      .stat span {
+        display: block;
+        margin-top: 8px;
+        color: #46535a;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .quote {
+        margin: 26px 0 0;
+        padding: 22px 0 0;
+        border-top: 1px solid var(--line);
+        font-size: 24px;
+        line-height: 1.8;
+        color: #162127;
+      }
+      .quote small {
+        display: block;
+        margin-top: 14px;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .gallery {
+        margin: 18px 0 0;
+        display: grid;
+        gap: 12px;
+      }
+      .gallery div {
+        height: 198px;
+        border-radius: 24px;
+        background:
+          radial-gradient(circle at 30% 26%, rgba(255,255,255,0.42), transparent 18%),
+          linear-gradient(140deg, #88969d, #d7cdc0 44%, #b7aa98 100%);
+      }
+      footer {
+        padding: 34px 24px 40px;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header>
+        <span>Editorial Mobile Template</span>
+        <span>01</span>
+      </header>
+
+      <div class="hero-media"></div>
+
+      <section class="hero-copy">
+        <div class="eyebrow">Portrait One-Page Science Story</div>
+        <h1>把一整段知识，<br />排成值得慢慢读的<br />手机长页。</h1>
+        <p class="deck">
+          这是一张竖版网页单页模板，适合做手机优先的知识专题、展览条目页、研究传播卡片式长文。
+        </p>
+        <div class="meta">
+          <div>
+            <div class="k">栏目</div>
+            <div class="v">深层观测笔记</div>
+          </div>
+          <div>
+            <div class="k">阅读时长</div>
+            <div class="v">4 min read</div>
+          </div>
+          <div>
+            <div class="k">日期</div>
+            <div class="v">2026.08.14</div>
+          </div>
+          <div>
+            <div class="k">地点</div>
+            <div class="v">North Shelf / B-12</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>竖版模板最重要的不是“做满屏”，而是让每一屏都留出呼吸。</h2>
+        <p>
+          所以这里没有横飞的组件，没有密集卡片，也没有过度 UI 化的栏位。它更像一篇被认真排过版的数字图录。
+        </p>
+        <div class="term">
+          <div class="term-label">术语卡 / Term Note</div>
+          <div class="term-value">界面中的术语、图注、变量和说明，应该都像同一个编辑系统写出来的。</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>数字不是为了热闹，而是为了让页面有证据感。</h2>
+        <div class="stats">
+          <div class="stat">
+            <strong>24</strong>
+            <span>个观测切片可在这类版式中拆成顺序段落，避免信息挤在同一屏。</span>
+          </div>
+          <div class="stat">
+            <strong>3.2x</strong>
+            <span>更适合手机阅读的节奏来自更窄的文字列宽和更长的段落呼吸。</span>
+          </div>
+          <div class="stat">
+            <strong>1 页</strong>
+            <span>也能完整容纳标题、导语、图像、术语、统计和收束段落。</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>图像可以不是照片，但必须像照片一样承担叙事重量。</h2>
+        <div class="gallery">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="quote">
+          “当手机端内容也能有图录感，知识页面才不会一上移动端就退化成普通资讯流。”
+          <small>mobile editorial / template line</small>
+        </div>
+      </section>
+
+      <footer>Advanced Science UI / Portrait Editorial</footer>
+    </main>
+  </body>
+</html>

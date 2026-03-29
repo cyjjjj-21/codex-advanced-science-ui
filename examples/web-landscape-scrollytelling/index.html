@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landscape Science Story</title>
+    <style>
+      :root {
+        --bg: #07151d;
+        --panel: #0d2530;
+        --soft: #102d39;
+        --ink: #eff6f7;
+        --muted: rgba(239, 246, 247, 0.68);
+        --accent: #60d6dd;
+        --sand: #d4b78d;
+        --line: rgba(255,255,255,0.11);
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: "PingFang SC", "Noto Sans CJK SC", sans-serif;
+        background:
+          radial-gradient(circle at 78% 18%, rgba(96,214,221,0.16), transparent 18%),
+          radial-gradient(circle at 22% 82%, rgba(212,183,141,0.18), transparent 16%),
+          linear-gradient(180deg, #08131a 0%, #07151d 30%, #0a1f29 100%);
+        color: var(--ink);
+      }
+      .shell { width: 100%; overflow: hidden; }
+      .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 30;
+        display: flex;
+        justify-content: space-between;
+        padding: 22px 34px;
+        font-size: 14px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.84);
+        mix-blend-mode: screen;
+      }
+      .nav .links { display: flex; gap: 18px; }
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 0.96fr 1.04fr;
+        align-items: end;
+        padding: 112px 48px 52px;
+        gap: 28px;
+      }
+      .copy {
+        padding-bottom: 36px;
+        position: relative;
+        z-index: 2;
+      }
+      .copy .eyebrow {
+        color: var(--accent);
+        font-size: 16px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 106px;
+        line-height: 0.88;
+        letter-spacing: -0.06em;
+        max-width: 780px;
+      }
+      .sub {
+        margin-top: 26px;
+        max-width: 560px;
+        font-size: 24px;
+        line-height: 1.6;
+        color: var(--muted);
+      }
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 34px;
+        padding: 14px 22px;
+        border: 1px solid rgba(96,214,221,0.48);
+        border-radius: 999px;
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 15px;
+      }
+      .visual {
+        min-height: calc(100vh - 164px);
+        border-radius: 28px;
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 72% 22%, rgba(96,214,221,0.72), transparent 18%),
+          radial-gradient(circle at 52% 48%, rgba(25, 76, 98, 0.9), transparent 38%),
+          linear-gradient(160deg, #0a202c 0%, #0f3441 45%, #061118 100%);
+        border: 1px solid rgba(255,255,255,0.12);
+      }
+      .visual::before, .visual::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.12);
+      }
+      .visual::before {
+        width: 620px; height: 620px; right: -30px; top: 80px;
+      }
+      .visual::after {
+        width: 340px; height: 340px; left: 90px; bottom: 80px;
+      }
+      .visual .tag {
+        position: absolute;
+        left: 28px;
+        top: 28px;
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(239,246,247,0.72);
+      }
+      .visual .panel {
+        position: absolute;
+        left: 28px;
+        bottom: 28px;
+        width: 300px;
+        padding: 20px 22px;
+        border-radius: 20px;
+        background: rgba(5,16,22,0.45);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(255,255,255,0.12);
+      }
+      .visual .panel strong {
+        display: block;
+        font-size: 42px;
+        line-height: 1;
+        margin: 10px 0 8px;
+      }
+      .visual .panel p {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.6;
+        color: rgba(239,246,247,0.74);
+      }
+      section.block {
+        padding: 72px 48px;
+      }
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: 26px;
+        align-items: start;
+      }
+      .intro-grid h2, .detail h2, .cta-band h2 {
+        margin: 0;
+        font-size: 54px;
+        line-height: 1.04;
+        letter-spacing: -0.05em;
+      }
+      .intro-grid .lead, .detail p {
+        font-size: 22px;
+        line-height: 1.75;
+        color: var(--muted);
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 34px;
+      }
+      .cards article {
+        padding: 22px 22px 26px;
+        border-top: 1px solid var(--line);
+      }
+      .cards .n {
+        font-size: 13px;
+        letter-spacing: 0.13em;
+        color: var(--accent);
+        text-transform: uppercase;
+      }
+      .cards h3 {
+        margin: 12px 0 10px;
+        font-size: 28px;
+      }
+      .cards p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 17px;
+        line-height: 1.7;
+      }
+      .detail {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 30px;
+        align-items: stretch;
+      }
+      .image-wall {
+        border-radius: 26px;
+        min-height: 720px;
+        overflow: hidden;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
+          linear-gradient(140deg, #1c3c49 0%, #0a1620 54%, #081118 100%);
+        border: 1px solid rgba(255,255,255,0.1);
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        gap: 14px;
+        padding: 14px;
+      }
+      .image-wall div {
+        border-radius: 18px;
+        background:
+          radial-gradient(circle at 30% 30%, rgba(255,255,255,0.46), transparent 18%),
+          linear-gradient(160deg, rgba(96,214,221,0.2), rgba(4,13,19,0.28)),
+          linear-gradient(135deg, #1c5160, #0f2732 60%, #081117);
+      }
+      .image-wall div:nth-child(1) { min-height: 100%; }
+      .image-wall div:nth-child(2),
+      .image-wall div:nth-child(3) {
+        min-height: 350px;
+      }
+      .quote-box {
+        align-self: end;
+        padding: 28px 0 0;
+        border-top: 1px solid var(--line);
+        font-size: 28px;
+        line-height: 1.7;
+        color: #ecf4f5;
+      }
+      .quote-box span {
+        display: block;
+        margin-top: 18px;
+        font-size: 15px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--sand);
+      }
+      .cta-band {
+        margin: 12px 48px 56px;
+        padding: 34px 36px;
+        border-radius: 26px;
+        background: linear-gradient(120deg, rgba(212,183,141,0.14), rgba(96,214,221,0.08));
+        border: 1px solid rgba(255,255,255,0.12);
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 30px;
+      }
+      .cta-band p {
+        margin: 16px 0 0;
+        max-width: 760px;
+        font-size: 20px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      .cta-band .pill {
+        padding: 14px 20px;
+        border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.16);
+        font-size: 15px;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <nav class="nav">
+        <div>Abyss Atlas</div>
+        <div class="links">
+          <span>Mission</span>
+          <span>Data</span>
+          <span>Field Notes</span>
+        </div>
+      </nav>
+
+      <section class="hero">
+        <div class="copy">
+          <div class="eyebrow">Immersive Science Landing Page</div>
+          <h1>海底不是背景，<br />它本身就是<br />叙事的主角。</h1>
+          <p class="sub">
+            这个横版单页模板把首页做成沉浸式科学叙事：一眼先给场景，
+            然后再展开机制、证据和行动入口。
+          </p>
+          <a href="#detail" class="cta">进入深层档案</a>
+        </div>
+        <div class="visual">
+          <div class="tag">Field Capture / 3000m Below</div>
+          <div class="panel">
+            summit corridor
+            <strong>03</strong>
+            <p>视觉锚点不依赖卡片堆砌，而是通过一个强场景去压住整页气质。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block">
+        <div class="intro-grid">
+          <h2>横版网页的关键，不是“宽”，而是让宽屏看起来像一块有重量的展厅墙面。</h2>
+          <div>
+            <p class="lead">
+              这里的 section 不走常规品牌站套路，而是像纪录片章节：先建立环境，再解释机制，再给出局部证据和叙事收束。
+            </p>
+            <div class="cards">
+              <article>
+                <div class="n">01 / scene</div>
+                <h3>强视觉起手</h3>
+                <p>用一整块深色海洋场景和高对比大标题建立世界观。</p>
+              </article>
+              <article>
+                <div class="n">02 / system</div>
+                <h3>内容像简报</h3>
+                <p>用标题、说明、局部数据和图像一起维持科研可信度。</p>
+              </article>
+              <article>
+                <div class="n">03 / flow</div>
+                <h3>滚动像章节</h3>
+                <p>每段只负责一个功能，不让页面沦为信息大杂烩。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block detail" id="detail">
+        <div class="image-wall">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div>
+          <h2>内容页系统要从首页就埋下秩序，而不是滚到第二屏才开始补救。</h2>
+          <p>
+            模板把媒体区、正文区和引语区拆成三种节奏。这样你以后往里换真实摄影、地图、实验图像或人物特写时，结构不会散。
+          </p>
+          <p>
+            数据块、术语卡、图注和 CTA 都应该是同一套视觉语言的延续，而不是突然出现一排 SaaS 组件。
+          </p>
+          <div class="quote-box">
+            “高级科普网页不是把知识塞进网页，而是让知识拥有自己的舞台调度。”
+            <span>editorial note / template voice</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div>
+          <h2>适合作为研究项目首页、展览专题页、科学栏目头图页的起始模板。</h2>
+          <p>把真实内容替换进去以后，它应该仍然像一页“被设计过的叙事”，而不是几个 section 的拼接。</p>
+        </div>
+        <div class="pill">Desktop One-Page / 1600px</div>
+      </section>
+    </div>
+  </body>
+</html>
