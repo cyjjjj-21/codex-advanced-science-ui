@@ -11,7 +11,7 @@
 当前可用风格大类：
 
 - `auto-hybrid`：自动选择主方向，再少量引入辅方向
-- `cinematic-narrative`：偏 OceanX，沉浸、暗场、电影感、现场叙事；允许 scroll-driven 场景推进和章节过场
+- `cinematic-narrative`：偏 OceanX，并吸收 Apple Scroll Narrative 的亮色品牌化滚动叙事；允许 scroll-driven 场景推进、sticky reveal 和章节过场
 - `editorial-museum`：偏 Brooklyn Museum / Apple Environment / MoMA / Fondation Cartier，留白、图录感、出版物秩序、公共事务 brief、馆藏目录级元信息、文化机构海报感；动效要最克制
 - `mission-data`：偏 NASA JPL，并吸收 Apple Environment 的证据组织方式，强调任务简报、结构精度、数据可信度；动效服务信息揭示
 - `image-led-premium`：偏 MasterClass，图像主导、海报感、非对称详情页；偏图像 hover 和轻量转场
@@ -40,7 +40,9 @@
 - `editorial-museum` 只允许轻 reveal、轻 hover 和轻 state change，禁止强鼠标跟随、夸张 parallax 和噪音式 scroll 特效。
 - `mission-data` 的动效应偏数据 reveal、步骤推进和参数展开，禁止炫技式场景运动。
 - `cinematic-narrative` 可以有层次 reveal、轻到中度 parallax 和章节过场，但不能牺牲阅读稳定性。
+- `cinematic-narrative` 也可以吸收 Apple 式的亮色品牌页面、sticky local nav、hash gallery 和 staged media progression，只要它仍然是滚动叙事而不是单纯封面营销。
 - `image-led-premium` 适合图像主导 hover、details reveal 和封面感转场，不应把交互机制做成页面骨架。
+- 如果页面语气偏学术解释、交互以参数试验台、原位状态机、sticky sync 或 parameter swap 为主，不要自动并入 `playful-data-essay`，应先判断它是否在挑战现有 option。
 - 当评估新 benchmark 是否要升格成新 option 时，不只看静态页面，也要看滚动叙事、hover 行为、sticky reveal、点击后状态变化和状态切换是否已经构成新的阅读范式。
 - 每个 section 只承担一个任务。
 - 不要一开始就堆卡片、徽章、tab 和小组件。

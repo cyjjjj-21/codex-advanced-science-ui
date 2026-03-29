@@ -17,15 +17,18 @@ options:
     label: 电影叙事
     sources:
       - OceanX
+      - Apple Scroll Narrative
     use_when:
       - 需要沉浸式主视觉
       - 页面靠场景、环境、任务现场建立世界观
+      - 页面虽然明亮、品牌化，但仍靠 scroll / sticky / staged media progression 推进专题叙事
     motion_profile:
-      stance: 允许较强 scroll-driven 叙事，但必须服务章节推进
+      stance: 允许较强 scroll-driven 叙事、sticky reveal 和 staged media progression，但必须服务章节推进
       allow:
         - 层次 reveal
         - 轻到中度 parallax
         - 章节过场与镜头推进
+        - sticky local nav 与 hash-based gallery 切换
       avoid:
         - 为热闹而热闹的滚动特效
         - 破坏阅读的强制动画
@@ -119,6 +122,8 @@ options:
       avoid:
         - 儿童化噪音
         - 只有 gimmick 没有信息增量
+        - 把学术参数试验台误当成 playful editorial story
     avoid:
       - 儿童化或玩具化
       - 只有 gimmick 没有洞察
+      - 学术解释型原位状态机被误并入此类

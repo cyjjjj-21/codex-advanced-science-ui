@@ -123,6 +123,53 @@
   - 容易被误学成信息密度失控的花哨网页，或者把 playful 错做成儿童化设计
   - 也容易只抄 sticker 和插画表层，却丢掉真正重要的“一个洞察配一个定制机制”
 
+## Distill
+
+- 归属判断：`scholarly explorable explanation` 新候选；暂不直接并入 `playful-data-essay`
+- 首页学习重点：
+  - 首页不是海报，也不是 museum 式首页，而是学术解释平台的期刊入口
+  - 品牌感来自论文级严肃性、长文结构、作者署名、引用与开放源代码入口，而不是人格化编辑语气
+  - 首页世界观强调“这里是解释机器学习思想的研究型出版物”，不是故事档案馆或文化机构
+- 内容页学习重点：
+  - 代表性内容页把参数滑杆、原位试验台、固定控制条和章节正文揉成同一个解释系统
+  - 点击小图不是打开独立详情页，而是把参数、step 和可视化状态同步进上方试验台，属于 `sticky sync / parameter swap`
+  - 滑杆与按钮改变的是论证过程本身，不是给正文增加一点点互动装饰
+- 动态交互学习重点：
+  - `scroll_narrative` 中等：滚动主要推进论证章节，而不是电影镜头感转场
+  - `state_transition_style` 高：参数变化、step 推进和局部刷新是主语言
+  - `click_state_pattern` 以原位状态机为主，不应误记成“很多小弹窗”
+  - `hover_behavior` 不是主骨架，只承担轻量注释和补充说明
+- 对 skill 的核心贡献：
+  - 证明有些网站的风格差异不在静态视觉，而在“交互本身就是知识表达方式”
+  - 给 motion 验证链路补上“原位解释状态机”和“点击后参数同步”的真实样本
+  - 说明 `playful-data-essay` 不能覆盖所有 explorable explanation，学术解释型交互可能需要独立分支
+- 风险提醒：
+  - 容易被误学成普通论文页加几个 slider，忽略它真正厉害的是正文、参数、图示和控制条的统一解释逻辑
+  - 也容易被误塞进 `playful-data-essay`，从而把学术解释误做成轻佻故事页
+
+## Apple Scroll Narrative (AirPods Pro 3)
+
+- 归属判断：强化 `cinematic-narrative`，并校准它与 `image-led-premium` 的动态边界；不新增 option
+- 首页学习重点：
+  - Apple 首页仍以品牌化 hero、固定全局导航和模块化专题入口建立世界观，强调“高完成度品牌宇宙”而不是单一沉浸场景
+  - 高级感来自媒体质量、版式收束和品牌秩序，而不是重情绪暗场
+- 内容页学习重点：
+  - `AirPods Pro 3` 页面像长篇产品故事页：章节推进、媒体分镜、sticky local nav 和多段 highlights gallery 连成一条滚动叙事线
+  - 亮色背景、超克制的文案和产品摄影并没有把它推向新流派，它仍是滚动叙事在品牌化语境中的成熟实现
+  - 内容页的核心不是复杂数据互动，而是让媒体、卖点和辅助说明随着滚动分批出场
+- 动态交互学习重点：
+  - `scroll_narrative` 高：滚动承担章节推进和媒体换景
+  - `sticky_reveal_behavior` 高：local nav、gallery hash 切换和 section 内 tab 共同组成 staged reveal
+  - `click_state_pattern` 以 hash 轮播、tab 切换和局部内容替换为主，不是新的交互哲学
+  - `image_strategy` 仍然极强，但图像服务的是 scroll-driven 叙事，不是单纯封面感
+- 对 skill 的核心贡献：
+  - 证明明亮、品牌化、产品导向的滚动故事页仍可落在 `cinematic-narrative`，不必默认等同 `image-led-premium`
+  - 给 `cinematic-narrative` 补上 `sticky gallery / staged media progression / hash-based highlight switching` 这组动态样本
+  - 帮助区分“图像主导详情页”和“滚动分镜叙事页”的边界
+- 风险提醒：
+  - 容易被误学成单纯的大图营销页，忽略它真正厉害的是滚动分镜和局部状态切换的秩序
+  - 也容易被误判成新风格，只因为它很会滚动，但它并没有改变阅读哲学
+
 ## NASA JPL
 
 - 归属判断：强化 `mission-data`
