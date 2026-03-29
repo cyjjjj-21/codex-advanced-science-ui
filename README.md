@@ -2,6 +2,8 @@
 
 这是一个给 Codex 用的本地 skill，用来把“科普 / 教学 / 研究传播 / 展览式知识内容”做得更像数字展览、科学任务档案和纪录片页面，而不是传统网课平台或 SaaS 卡片站。
 
+当前主线版本可以按 `v1.7.x` 理解：静态视觉系统、style option 分流、benchmark 学习，以及第一层动态交互观察与验收链路都已经并入主仓。
+
 ## 这个 skill 解决什么问题
 
 默认情况下，模型很容易把“教育类 UI”写成这几种东西：
@@ -32,6 +34,10 @@
   - 如果 benchmark 的高级感依赖滚动、hover、sticky 或 reveal，skill 会把动态语言也纳入结构化观察
   - 对交互型站点，会补做 `click-state sweep`，区分 modal、原位切换、sticky 同步、参数交换和局部刷新
   - 现在已经有 Distill、Apple Scroll Narrative、The Pudding Happy Map 三组真实样本，覆盖 scroll / click-state / sticky / hover / cursor 的最终验收
+- 动态验证模板
+  - 已经有统一的 `motion validation template`
+  - 已经有统一的 `motion classification note` 输出格式
+  - 已经有一份最终验收文档来判断 motion MVP 是否达到可用状态
 - 风格分流
   - 遇到明显异类风格时，会先判断是否该升级成新的 option，而不是硬混进默认模式
 - 结构化知识层
@@ -81,7 +87,7 @@
 - `docs/ROADMAP.zh-CN.md`
   - skill 的 v1.5 / v2 演进路线图
 - `docs/VALIDATION.zh-CN.md`
-  - v1.5 升级后的验证流程与通过标准
+  - 当前主线的验证流程与通过标准
 - `docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md`
   - 动态验证模板，统一 scroll / click-state / sticky / hover 的采样方式
 - `docs/MOTION_FINAL_VALIDATION.zh-CN.md`
@@ -148,18 +154,19 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 
 如果只有第一页惊艳、后面全是常规文章流，那就说明这个 skill 还没有真正生效。
 
-从 v1.5 开始，这个 skill 还增加了两种能力：
+从 `v1.5` 到当前 `v1.7.x`，这套 skill 已经经历了三层升级：
 
-- 能把新 benchmark 网站按统一框架吸收进经验库
-- 遇到明显异类风格时，会先询问要不要升级成新的 style option，而不是直接硬混进默认 prompt
+1. 结构化经验库与 style option 分流
+2. 内容页 / benchmark 学习流程标准化
+3. motion MVP：把滚动叙事、click-state、sticky、hover、cursor 纳入观察与分类体系
 
-现在进一步补上了两条边界：
+当前主线已经稳定具备这些边界：
 
 - `playful-data-essay` 是专门的互动叙事分支，不默认混入大多数普通项目
 - `editorial-museum` 与 `mission-data` 也能吸收 Apple Environment 这种“明亮底色 + 证据组织 + 公共事务 brief”型参考，而不必只靠暗场或大片建立高级感
 - `editorial-museum` 进一步吸收了 MoMA 的“馆藏目录级元信息 / 展厅与楼层定位 / 作品标签系统”能力
 - `editorial-museum` 也吸收了 Fondation Cartier 的“品牌化纯色场 / 海报式机构首页 / Visit 与 Programme 并存的文化机构入口”能力
-- 现在开始补“动态交互语言”这一层：以后判断 benchmark 是否挑战旧分类，不只看静态页面，也看滚动叙事、hover 行为和 reveal 机制
+- motion 这一层已经不只是“开始补”，而是已经形成最小可用体系：以后判断 benchmark 是否挑战旧分类，不只看静态页面，也看滚动叙事、hover、sticky、click-state 和 cursor 机制
 
 ## 动效实现建议
 
@@ -221,9 +228,15 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 
 这份模板不是教模型“怎么做动画”，而是把“怎么观察滚动叙事、click-state、sticky、tab、gallery 和原位状态变化”固化成可复用流程。
 
-## v1.5 结构说明
+如果你想看 motion 这条主线是否已经达到“可用”状态，直接看：
 
-v1.5 开始，仓库会逐步形成“工作流层 + 经验库层 + prompt 层 + option 层”的结构：
+- [docs/MOTION_FINAL_VALIDATION.zh-CN.md](./docs/MOTION_FINAL_VALIDATION.zh-CN.md)
+
+这份文档会用 Distill、Apple Scroll Narrative、The Pudding - Happy Map 三组真实样本做最终回归。
+
+## 当前结构说明
+
+这套 skill 目前已经形成“工作流层 + 经验库层 + prompt 层 + option 层 + motion 验证层”的结构：
 
 - `SKILL.md`
   - 定义如何使用 skill、何时询问用户、何时学习 benchmark
@@ -241,3 +254,5 @@ v1.5 开始，仓库会逐步形成“工作流层 + 经验库层 + prompt 层 +
   - 定义“补强已有风格 / 修正已有风格 / 新增风格候选”的判断标准
 - `templates/motion-classification-note.md`
   - 统一输出“强化已有风格 / 修正已有风格 / 新候选，暂不升格 / 建议升格新 option”的结论格式
+
+换句话说，主仓现在承载的已经不是单纯的 prompt 包，而是一套可持续迭代的高级科普 UI 设计研究系统。
