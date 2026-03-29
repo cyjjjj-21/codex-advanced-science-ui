@@ -31,6 +31,7 @@
 - 动态交互观察
   - 如果 benchmark 的高级感依赖滚动、hover、sticky 或 reveal，skill 会把动态语言也纳入结构化观察
   - 对交互型站点，会补做 `click-state sweep`，区分 modal、原位切换、sticky 同步、参数交换和局部刷新
+  - 现在已经有 Distill、Apple Scroll Narrative、The Pudding Happy Map 三组真实样本，覆盖 scroll / click-state / sticky / hover / cursor 的最终验收
 - 风格分流
   - 遇到明显异类风格时，会先判断是否该升级成新的 option，而不是硬混进默认模式
 - 结构化知识层

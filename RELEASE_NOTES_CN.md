@@ -1,5 +1,32 @@
 # 发布说明
 
+## v1.7.1
+
+这个版本没有新增 style option，而是把 `motion MVP` 从“有一层动态方法论”继续打磨到了“有真实样本、有模板、有最终验收”的可用状态。
+
+### 本版新增
+
+- `references/benchmark-library.md` 新增 Distill 与 Apple Scroll Narrative 的动态 benchmark 结论，并补强 The Pudding 的 hover / cursor 样本
+- `docs/MOTION_BENCHMARK_NOTES.zh-CN.md` 记录 Distill / Apple 的 phase 2 压测结果
+- `docs/MOTION_VALIDATION_TEMPLATE.zh-CN.md` 固化 scroll / click-state / sticky / hover 的动态验证模板
+- `templates/motion-classification-note.md` 固化“强化已有风格 / 修正已有风格 / 新候选，暂不升格 / 建议升格新 option”的判断输出格式
+- `docs/MOTION_FINAL_VALIDATION.zh-CN.md` 给出 motion MVP 的最终验证流与验收结论
+
+### 这次补强了什么
+
+这一版之后，`advanced-science-ui` 的动态能力不再只是“知道要看动效”，而是已经能稳定地区分：
+
+- 滚动是在推进叙事，还是只在制造热闹
+- 点击后是 modal、原位切换、sticky 同步，还是参数交换
+- hover / cursor 是装饰性微交互，还是在承担探索和发现功能
+- 某个动态站点是在强化旧风格，还是已经挑战现有 option
+
+最终这套 motion MVP 用 3 组真实样本完成了闭环验证：
+
+- Distill：`新候选，暂不升格`
+- Apple AirPods Pro 3：`强化已有风格`
+- The Pudding - Happy Map：`强化已有风格`
+
 ## v1.7.0
 
 这个版本没有新增 style option，而是给 `advanced-science-ui` 增加了第一层动态交互方法论与验收能力。
