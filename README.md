@@ -52,6 +52,8 @@
   - skill 预览图
 - `docs/ROADMAP.zh-CN.md`
   - skill 的 v1.5 / v2 演进路线图
+- `docs/VALIDATION.zh-CN.md`
+  - v1.5 升级后的验证流程与通过标准
 - `references/`
   - benchmark 经验库、风格维度、决策规则、更新 workflow
 - `templates/`
@@ -144,6 +146,19 @@ git clone https://github.com/<your-account>/codex-advanced-science-ui.git ~/tmp/
 - 学习结果如何沉淀进经验库和 prompt
 - 什么时候需要把新风格升级成 option
 - v1.5 和 v2 的边界、目标和进入条件分别是什么
+
+## 验证方式
+
+如果你想验证这个 skill 升级是否真的有效，而不是只看文档数量，直接看：
+
+- [docs/VALIDATION.zh-CN.md](./docs/VALIDATION.zh-CN.md)
+
+这份文档会验证：
+
+- 默认 `auto-hybrid` 是否还能稳定工作
+- 显式 style option 是否真的改变输出
+- 新 benchmark 是否会落进经验库
+- 明显异类风格是否会触发新 option 询问
 
 ## v1.5 结构说明
 
